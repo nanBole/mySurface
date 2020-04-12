@@ -1,0 +1,43 @@
+1.git常用命令
+	安装	
+		Linux: sudo apt-get install git
+			配置用户名和邮箱
+				git config --global user.name "xxx"
+				git config --global user.email "xxx"
+		mac ：  brew install git 
+		windows： 官网download 
+	git命令-- 查看git命令
+	git config -l  （git config --list）:查看git config配置信息
+
+	1.创建仓库 -- git init
+	2.添加一个新文件  readme.txt  -- 工作区
+	3.提交到临时仓库 -- git add readme.txt     --将文件放到stage临时仓库
+	4.提交到仓库  -- git commit -m "add 123"    [-m：注释]    --将文件master仓库
+	5.进行修改文件内容，查看修改内容 -- git diff
+	6.查看修改内容 -- git status
+	7.撤销修改工作区内容 -- git checkout 
+	8.撤销临时仓库内容 --git reset HEAD 
+	9.撤销仓库内容  -- git reset --hard HEAD^ 回到上一个版本 1个尖号代表上一次存档版本，2个尖号，代表上上次存档版本
+	10.GIT log查看仓库日志
+2.git log分析与检索
+3.geit分支管理
+4.分支开发主干发布模式
+
+
+github：
+	1.配置密钥
+		查看是否存在id_rsa和id_rsa.pub文件
+		windows: cd ~/.ssh
+		如果没有SSH key ，则需要先生成一下
+		ssh-keygen -t rsa -C "xxxx@emain.com"
+	2.注册github账号
+		进入settings,-SSH and GPG keys ,粘贴密钥
+	3.添加远程仓库
+		1.在github创建一个仓库
+
+		git remote add origin git@github.com：xxx
+	4.将本地代码上传到远端
+		第一次推送：git push -u origin master
+		后面可以用: git push origin master
+ 
+分支管理：
